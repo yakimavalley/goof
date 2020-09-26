@@ -1,0 +1,16 @@
+---
+title: "Goofitus"
+layout: default
+---
+
+<h1>what's going on</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li><a href="{{post.url | relative_url}}">title:{{post.title}}</a></li>
+      <li>site.baseurl: {{site.baseurl}}</li>
+      <li>site.url: {{site.url}}</li>
+      <li>post url: {{post.url}}</li>
+      <li>post relative_url: {{post.url | relative_url}}</li>
+      <li>post absolute_url: {{post.url | absolute_url}}</li>
+    {% endfor %}
+  </ul>
